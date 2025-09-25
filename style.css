@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(80, 20, 132);
+}
+
+.title {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem; /* Tamanho grande e legível */
+    font-weight: 700; /* Negrito para destaque */
+    color: #1a1a1a; /* Cor escura, mas não preta pura */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    margin: 40px 0 20px 0;
+    position: relative;
+    line-height: 1.2;
+    z-index: 1;
+  }
+  
+  /* Efeito de sublinhado animado */
+  .title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Animação ao passar o mouse */
+  .title:hover::after {
+    width: 120px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+  
+    .title::after {
+      width: 60px;
+    }
+  
+    .title:hover::after {
+      width: 80px;
+    }
+  }
+  
